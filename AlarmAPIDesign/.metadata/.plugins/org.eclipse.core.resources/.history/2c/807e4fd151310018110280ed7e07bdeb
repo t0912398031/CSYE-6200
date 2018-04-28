@@ -1,0 +1,109 @@
+package project1;
+import java.time.*;
+
+public class Alarm extends AbstractAlarmAPI{
+	
+	private String title;
+	private String description;
+	private Boolean isRepeating;
+	private Boolean isEnable;
+	private Integer starts = 7;
+	private LocalDate startDate;
+
+	
+	
+	public Alarm() {
+		super();
+		this.title = "General Alarm";
+		this.description = "Time to go";
+		this.isEnable = false;
+		this.isRepeating =false;
+		this.startDate = LocalDate.of(2000, 1, 1);
+		
+	}
+	
+
+	public Alarm(String title, Boolean isRepeating, Integer starts) {
+		super();
+		this.title = title;
+		this.isRepeating = isRepeating;
+		this.starts = starts;
+	}
+
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Boolean getIsRepeating() {
+		return isRepeating;
+	}
+
+	public void setIsRepeating(Boolean isRepeating) {
+		this.isRepeating = isRepeating;
+	}
+
+	public Integer getStarts() {
+		return starts;
+	}
+
+	public void setStarts(Integer starts) {
+		this.starts = starts;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public Boolean getIsEnable() {
+		return isEnable;
+	}
+
+
+	public void setIsEnable(Boolean enable) {
+		this.isEnable = enable;
+	}
+
+
+	@Override
+	public void alarm(LocalDate alarmDate) {
+		if(LocalDate.now().equals(alarmDate)) {
+		this.emailReminder();
+		this.SMSReminder();
+		this.mailReminder();
+		}
+	}
+	
+	@Override
+	public String alarmInfo() {
+		return "Warning!";
+	}
+
+	@Override
+	public void emailReminder() {
+		System.out.println("email to admin@neu.edu");
+	}
+
+	@Override
+	public void SMSReminder() {
+		System.out.println("txt to his phone");
+	}
+
+	@Override
+	public void mailReminder() {
+		System.out.println("mail to his address");		
+	}
+
+	
+
+}

@@ -1,0 +1,15 @@
+package project1;
+
+import java.time.LocalDate;
+
+public class VaccineAlarm extends Alarm{
+	
+	private LocalDate dob;
+
+	public VaccineAlarm() {
+		super();
+	}
+	
+	
+
+}

@@ -1,0 +1,10 @@
+package project1;
+
+import java.util.List;
+
+public class NEDaycare {
+	
+	private List<Student> studentList;
+	private String name;
+
+}

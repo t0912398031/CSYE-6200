@@ -1,0 +1,30 @@
+package project1;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.List;
+
+public class VaccineAlarm extends Alarm{
+	
+	private LocalDate dob;
+	private int intervalMonths;
+	private int frequence;
+
+	public VaccineAlarm(int DOByear,int DOBmonth,int DOBday, int intervalMonths, int frequence) {
+		super();
+		this.dob =  LocalDate.of(DOByear, DOBmonth, DOBday);
+		
+		this.setDescription("It's time to vaccine");
+		this.setTitle("Vaccination");
+				
+	}
+	
+	public List<LocalDate> getVaccinationDates(){
+		long period =Period.between(dob, LocalDate.now()).toTotalMonths();
+		long age = period/12;
+		if(dob.plusYears(age).equals(LocalDate.now())) return dob.plusYears(age);
+		return dob.plusYears(age+1);
+	}
+	
+
+}

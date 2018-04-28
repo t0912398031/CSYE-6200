@@ -1,0 +1,16 @@
+package edu.neu.csye6200;
+
+import java.time.LocalDate;
+
+public abstract class AbstractAlarmAPI {
+
+	public abstract void alarm();
+	public abstract String alarmInfo(LocalDate date);
+	public abstract String timeRemaining(LocalDate date);
+	public abstract void overDuedAlarm();
+	public abstract void emailReminder(LocalDate date);
+	public abstract void SMSReminder(LocalDate date);//Short Message Service
+	public abstract void mailReminder(LocalDate date);
+	
+	
+}

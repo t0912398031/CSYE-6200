@@ -1,0 +1,30 @@
+package project1;
+
+import java.util.List;
+
+public class NEDaycare {
+	
+	private List<Student> studentList;
+	private String name;
+	
+	public List<Student> getStudentList() {
+		return studentList;
+	}
+	public void setStudentList(List<Student> studentList) {
+		this.studentList = studentList;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	public static void demo() {
+		NEDaycare neDaycare = new NEDaycare();
+		neDaycare.getStudentList().stream().forEach(n->n.showAlarm());
+	}
+	
+
+}

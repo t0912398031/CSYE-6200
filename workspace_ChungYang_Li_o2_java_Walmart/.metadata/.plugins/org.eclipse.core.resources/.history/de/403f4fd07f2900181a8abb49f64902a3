@@ -1,0 +1,50 @@
+package edu.neu.csye6200;
+
+public class Walmart extends Store{
+	private int num;
+	private String name;
+	public Walmart() {
+		// TODO Auto-generated constructor stub
+	}
+	public Walmart(int num, String name) {
+		this.num = num;
+		this.name = name;// TODO Auto-generated constructor stub
+	}
+
+	public static void demo1() {	
+		System.out.println("\n Sort by price: \n");
+		Store walmart = new Walmart(77, "Walmart");
+		walmart.addItem(new Electronics(7,2));
+		walmart.addItem(new Electronics(3,4));
+		walmart.addItem(new Electronics(5,9));
+		walmart.addItem(new Electronics(2,1));	
+		walmart.addItem(new ElectronicsFactory().getObject(4,3));
+		walmart.sortInventory();
+		walmart.showInventory();
+	}
+	
+	public static void demo2() {
+		System.out.println("\n Sort by Item Number \n");
+		Store walmart = new Walmart(77, "Walmart");
+		walmart.addItem(new Bread(6,2));
+		walmart.addItem(new Bread(4,9));
+		walmart.addItem(new Bread(9,5));
+		walmart.addItem(new Bread(1,4));
+		walmart.addItem(new BreadFactory().getObject(2,6));
+		walmart.sortInventory();
+		walmart.showInventory();
+	}
+	
+	public static void demo3() {
+		System.out.println("\n Sort by Calories \n");
+		Store walmart = new Walmart(77, "Walmart");
+		walmart.addItem(new LiteBread(7,2,6));
+		walmart.addItem(new LiteBread(3,4,9));
+		walmart.addItem(new LiteBread(5,9,1));
+		walmart.addItem(new LiteBread(2,1,4));
+		walmart.addItem(new LiteBreadFactory().getObject(4,6,8));
+		walmart.sortInventory();
+		walmart.showInventory();
+
+	}
+}

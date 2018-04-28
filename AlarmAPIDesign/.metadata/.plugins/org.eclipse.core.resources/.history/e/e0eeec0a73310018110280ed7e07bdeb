@@ -1,0 +1,20 @@
+package project1;
+
+import java.time.LocalDate;
+
+public class VaccineAlarm extends Alarm{
+	
+	private LocalDate dob;
+
+	public VaccineAlarm(int DOByear,int DOBmonth,int DOBday) {
+		super();
+		this.dob =  LocalDate.of(DOByear, DOBmonth, DOBday);
+		this.setDescription("It's time to vaccine");
+		this.setTitle("Vaccination");
+				
+	}
+	
+	
+	
+
+}

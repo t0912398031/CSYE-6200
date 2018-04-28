@@ -1,0 +1,130 @@
+package project1;
+import java.time.*;
+
+public class Alarm extends AbstractAlarmAPI{
+	
+	private String title;
+	private String description;
+	private Boolean isRepeating;
+	private Boolean isEnable;
+	private LocalDate startDate;
+
+	
+	
+	public Alarm() {
+		super();
+		this.title = "General Alarm";
+		this.description = "Time to go";
+		this.isEnable = false;
+		this.isRepeating =false;
+		this.startDate = LocalDate.of(2000, 1, 1);
+		
+	}
+	
+
+	public Alarm(String title, String description, Boolean isRepeating, LocalDate startDate,Boolean isEnable) {
+		super();
+		this.title = title;
+		this.description =description;
+		this.isRepeating = isRepeating;
+		this.isEnable = isEnable;
+		this.startDate = startDate;
+	}
+
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Boolean getIsRepeating() {
+		return isRepeating;
+	}
+
+	public void setIsRepeating(Boolean isRepeating) {
+		this.isRepeating = isRepeating;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public Boolean getIsEnable() {
+		return isEnable;
+	}
+
+
+	public void setIsEnable(Boolean enable) {
+		this.isEnable = enable;
+	}
+	
+
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+
+
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+
+
+	@Override
+	public void alarm() {
+		if(LocalDate.now().equals(startDate)) {
+		this.emailReminder();
+		this.SMSReminder();
+		this.mailReminder();
+		}else {
+			System.out.println();
+		}
+	}
+	
+	@Override
+	public String alarmInfo() {
+		StringBuilder sb =new StringBuilder();
+		sb.append("Title: ").append(this.getTitle()).append("\n")
+		.append("Description: ").append(this.getDescription()).append("\n");
+		return sb.toString();
+	}
+	@Override
+	public String timeRemaining() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(Period.between(LocalDate.now(), startDate).toString().toString()).append(" days left!");
+		return sb.toString();
+	}
+
+	@Override
+	public void emailReminder() {
+		System.out.println("email to admin@neu.edu");
+		System.out.println(this.alarmInfo());
+		
+	}
+
+	@Override
+	public void SMSReminder() {
+		System.out.println("txt to his phone");
+		System.out.println(this.alarmInfo());
+	}
+
+	@Override
+	public void mailReminder() {
+		System.out.println("mail to his address");
+		System.out.println(this.alarmInfo());
+	}
+
+
+	
+
+	
+
+}

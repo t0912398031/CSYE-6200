@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="edu.neu.csye6200.Item"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.Store"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.AbstractStoreAPI"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.Electronics"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.Walmart"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.AbstractItemAPI"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.ElectronicsFactory"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.Bread"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.BreadFactory"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.LiteBreadFactory"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="edu.neu.csye6200.LiteBread"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+</qualifiedTypeNameHistroy>

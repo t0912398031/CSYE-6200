@@ -1,0 +1,28 @@
+package edu.neu.csye6200;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Controller {
+
+	public Controller() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		 List<Person> people = new ArrayList<>();
+		 
+		 people.add(
+		       new Person.Builder()
+			            .givenName("Bob")
+			            .surName("Baker")
+			           .age(21)
+			           .gender("MALE")
+			            .email("bob.baker@example.com")
+				             .phoneNumber("201-121-4678")
+			             .address("44 4th St, Smallville, KS 12333")
+			            .build() 
+			       );
+	}
+
+}

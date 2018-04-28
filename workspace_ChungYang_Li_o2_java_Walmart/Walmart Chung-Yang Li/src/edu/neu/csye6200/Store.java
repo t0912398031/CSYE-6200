@@ -1,0 +1,37 @@
+package edu.neu.csye6200;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Store extends AbstractStoreAPI{
+	List<AbstractItemAPI> inventory = new ArrayList<>();
+	
+	public Store() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void addItem(AbstractItemAPI p) {
+		inventory.add(p);
+	}
+
+	  public void sortInventory() {
+       this.inventory.sort(null);     
+	  }
+	    
+	  public void showInventory() {
+		  System.out.println(this.getInventoryInfo());
+		  for(AbstractItemAPI b : this.inventory) {
+				b.show();
+			}
+	}
+
+	@Override
+	public String getInventoryInfo() {
+		return "Inventory size: " + String.valueOf(this.inventory.size());
+	}
+
+	@Override
+	public void clearInventory() {
+		inventory.clear();		
+	}
+}

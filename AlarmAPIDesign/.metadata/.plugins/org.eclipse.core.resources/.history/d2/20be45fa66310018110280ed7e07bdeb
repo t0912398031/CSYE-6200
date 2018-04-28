@@ -1,0 +1,33 @@
+package project1;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public class RegistrationAlarm extends Alarm{
+	
+	private LocalDate dob;
+	
+	
+	public RegistrationAlarm(int DOByear,int DOBmonth,int DOBday) {
+		super();
+		this.dob = LocalDate.of(DOByear, DOBmonth, DOBday);
+		this.setStartDate(registerday());
+		this.setDescription("It's time to register");
+		this.setTitle("Registration Day");
+		
+	}
+
+	private LocalDate registerday() {
+		long period =Period.between(dob, LocalDate.now()).toTotalMonths();
+		long age = period/12;
+		if(dob.plusYears(age).equals(LocalDate.now())) return dob.plusYears(age);
+		return dob.plusYears(age+1);
+	}
+	
+	
+	public static void demo() {
+		Alarm registrationAlarm = new RegistrationAlarm(2016,2,28);
+		registrationAlarm.alarm();
+	}
+
+}

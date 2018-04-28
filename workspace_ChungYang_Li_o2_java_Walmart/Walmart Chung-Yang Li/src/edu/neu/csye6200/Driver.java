@@ -1,0 +1,39 @@
+package edu.neu.csye6200;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Walmart.demo1();
+			Walmart.demo2();
+			Walmart.demo3();
+			Bread.demo();
+	}
+
+}
+//Sort by price: 
+//
+//Inventory size: 5
+//Electronics: Price: 2, ItemNumber: 1
+//Electronics: Price: 3, ItemNumber: 4
+//Electronics: Price: 4, ItemNumber: 3
+//Electronics: Price: 5, ItemNumber: 9
+//Electronics: Price: 7, ItemNumber: 2
+//
+//Sort by Item Number 
+//
+//Inventory size: 5
+//Bread: Price: 6, ItemNumber: 2
+//Bread: Price: 1, ItemNumber: 4
+//Bread: Price: 9, ItemNumber: 5
+//Bread: Price: 2, ItemNumber: 6
+//Bread: Price: 4, ItemNumber: 9
+//
+//Sort by Calories 
+//
+//Inventory size: 5
+//LiteBread: Price: 5, ItemNumber: 9, Calories: 1
+//LiteBread: Price: 2, ItemNumber: 1, Calories: 4
+//LiteBread: Price: 7, ItemNumber: 2, Calories: 6
+//LiteBread: Price: 4, ItemNumber: 6, Calories: 8
+//LiteBread: Price: 3, ItemNumber: 4, Calories: 9

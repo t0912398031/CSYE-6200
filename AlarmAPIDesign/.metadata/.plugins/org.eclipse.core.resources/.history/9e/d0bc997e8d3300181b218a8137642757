@@ -1,0 +1,11 @@
+package project1;
+
+public class Student {
+	
+	private String name;
+	private int dobYear;
+	private int dobMonth;
+	private int dobDay;
+	
+
+}
